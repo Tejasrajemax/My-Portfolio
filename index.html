@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tejas Raj — Software & AI Developer</title>
+<meta name="description" content="Portfolio of Tejas Raj — Computer Science student building software that turns raw data into human meaning, from a Java banking system to full-stack recommendation systems.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">TR<span class="nav-mark-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Say hello</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <canvas id="waveCanvas" class="hero-canvas"></canvas>
+  <div class="hero-scanline"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow"><span class="eyebrow-pulse"></span>Open to opportunities</p>
+    <h1 class="hero-title">
+      <span class="hero-title-line">Tejas Raj</span>
+    </h1>
+    <p class="hero-role">Computer Science student turning <span class="hl">signals</span> — audio, text, keystrokes, transactions — into software that <span class="hl">listens and responds.</span></p>
+
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">
+        <span>View projects</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="resume.html" class="btn btn-ghost">
+        <span>View résumé</span>
+      </a>
+    </div>
+
+    <div class="hero-freq-labels">
+      <span>96 Hz</span><span>440 Hz</span><span>2.4 kHz</span><span>8 kHz</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue">
+    <span>scroll</span>
+    <div class="scroll-line"><i></i></div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-portrait">
+      <div class="portrait-frame">
+        <img src="portrait.png" alt="Portrait of Tejas Raj" class="portrait-img">
+        <div class="portrait-corner tl"></div>
+        <div class="portrait-corner br"></div>
+      </div>
+      <div class="portrait-tag">
+        <span class="tag-dot"></span> B.Tech CSE · 2023–2027
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <p class="section-eyebrow">01 — About</p>
+      <h2 class="section-title">I build the layer between raw data and human meaning.</h2>
+      <p class="about-text">
+        I'm a Computer Science undergrad at Shobhit Institute of Engineering &amp; Technology, Meerut, with a habit of picking projects that turn messy, real-world signals into something a person can actually use — a voice clip into an emotion label, a scroll of ratings into a recommendation, a stream of keystrokes into a readable log.
+      </p>
+      <p class="about-text">
+        Most of what I know, I've built to learn: a Java banking system and a Java library management system built from first principles, a Flask-based recommendation engine, a keystroke-monitoring desktop app. I care as much about how software feels to use as how it works underneath — which is why the frontend gets the same attention as the logic behind it.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Shipped projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2027">0</span>
+          <span class="stat-label">Graduating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section work" id="work">
+  <div class="container">
+    <p class="section-eyebrow">02 — Selected work</p>
+    <h2 class="section-title">Four problems, four signals.</h2>
+  </div>
+
+  <div class="work-list container">
+
+    <!-- Featured project -->
+    <article class="work-featured">
+      <div class="work-featured-visual">
+        <canvas id="featuredCanvas" class="featured-canvas"></canvas>
+        <div class="featured-labels">
+          <span style="--i:0">deposit</span>
+          <span style="--i:1">withdraw</span>
+          <span style="--i:2">balance</span>
+          <span style="--i:3">transfer</span>
+          <span style="--i:4">history</span>
+        </div>
+      </div>
+      <div class="work-featured-copy">
+        <span class="work-kicker">Flagship · Personal build</span>
+        <h3><a href="https://github.com/Tejasrajemax/Java-Banking-System.git">Console Based Banking System</a> </h3>
+        <p>An OOP-driven Java console application for Savings and Current accounts: authentication, deposits, withdrawals, balance checks and transaction history, all backed by file I/O with careful exception handling so no operation is left in an inconsistent state.</p>
+        <ul class="work-stack">
+          <li>Java</li><li>OOPs</li><li>File I/O</li><li>Exception Handling</li>
+        </ul>
+        <div class="work-meta">
+          <div><span>Accounts</span>Savings · Current</div>
+          <div><span>Core ops</span>Deposit · Withdraw · Transfer · History</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Grid of remaining projects -->
+    <div class="work-grid">
+
+      <article class="work-card" data-tilt>
+        <div class="work-card-top">
+          <span class="work-card-index">01</span>
+          <span class="work-card-date">2026 — Present</span>
+        </div>
+        <h3>Library Management System</h3>
+        <p>Console-based library system for book, student and librarian management — search, issue, return, reservation and fine calculation, all on custom exception handling and modular Java architecture.</p>
+        <ul class="work-stack">
+          <li>Java</li><li>OOPs</li><li>File I/O</li><li>Java Collections</li>
+        </ul>
+      </article>
+
+      <article class="work-card" data-tilt>
+        <div class="work-card-top">
+          <span class="work-card-index">02</span>
+          <span class="work-card-date">Jan 2026</span>
+        </div>
+        <h3>Keystroke Monitoring System</h3>
+        <p>Desktop Tkinter app that captures key press/release events via pynput, and writes structured JSON/text activity logs for later analysis.</p>
+        <ul class="work-stack">
+          <li>Python</li><li>Tkinter</li><li>pynput</li><li>SQLite</li>
+        </ul>
+      </article>
+
+      <article class="work-card" data-tilt>
+        <div class="work-card-top">
+          <span class="work-card-index">03</span>
+          <span class="work-card-date">Nov 2025</span>
+        </div>
+        <h3><a href="https://github.com/Tejasrajemax/Recommendation-System.git">Recommendation System</a></h3>
+        <p>Collaborative-filtering engine that ranks books and movies from user rating data, served through a Flask backend with a MongoDB store for activity and metadata.</p>
+        <ul class="work-stack">
+          <li>Flask</li><li>MongoDB</li><li>JavaScript</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <p class="section-eyebrow">03 — Toolkit</p>
+    <h2 class="section-title">What I build with.</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="skill-pills">
+          <span>Python</span><span>Java</span><span>JavaScript</span><span>C</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks &amp; runtime</h3>
+        <div class="skill-pills">
+          <span>Flask</span><span>Node.js</span><span>Express.js</span><span>HTML</span><span>CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data &amp; ML</h3>
+        <div class="skill-pills">
+          <span>MongoDB</span><span>MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <div class="skill-pills">
+          <span>VS Code</span><span>Google Colab</span><span>Jupyter</span><span>GitHub</span><span>Figma</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>AI-assisted dev</h3>
+        <div class="skill-pills">
+          <span>GitHub Copilot</span><span>Claude</span><span>Gemini</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Practice</h3>
+        <div class="skill-pills">
+          <span>Communication</span><span>Leadership</span><span>Adaptability</span><span>Time Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section timeline" id="timeline">
+  <div class="container">
+    <p class="section-eyebrow">04 — Timeline</p>
+    <h2 class="section-title">Education, credentials &amp; experience.</h2>
+
+    <div class="timeline-track">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Oct 2023 — Jun 2027</div>
+        <div class="tl-body">
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p>Shobhit Institute of Engineering &amp; Technology, Meerut, Uttar Pradesh. Coursework: Data Structures, Algorithms Analysis, Computer Networks, Web Development, Database Management, Internet Technology, Computer Architecture. In progress.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">6 Jul 2026</div>
+        <div class="tl-body">
+          <h3><a href="inter.png">Java Intermediate with AI</a></h3>
+          <p>Unstop certification.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">1 Jul 2026</div>
+        <div class="tl-body">
+          <h3><a href="Basic.jpg">Java Programming with AI</a></h3>
+          <p>Unstop certification.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Jun 2026</div>
+        <div class="tl-body">
+          <h3><a href="Oracle F.png">Java Training and Assessment (Badge)</a></h3>
+          <p>myLearn Oracle.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Dec 2025 — Jan 2026</div>
+        <div class="tl-body">
+          <h3>Cybersecurity Virtual Internship</h3>
+          <p>VOIS &amp; Edunet Foundation. Trained in threat detection, risk assessment, and AI applications within security monitoring.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Dec 2025</div>
+        <div class="tl-body">
+          <h3><a href="Oracle P.png">Java Foundation (Badge)</a></h3>
+          <p>myLearn Oracle.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Jun 2024</div>
+        <div class="tl-body">
+          <h3><a href="Swyam.png"></a>Python Foundation</h3>
+          <p>Swyaam Portal.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <canvas id="contactCanvas" class="contact-canvas"></canvas>
+  <div class="container contact-inner">
+    <p class="section-eyebrow light">05 — Contact</p>
+    <h2 class="contact-title">Let's build the<br>next signal together.</h2>
+    <p class="contact-sub">Open to internships, collaborative builds, and anything that turns messy data into something useful.</p>
+
+    <div class="contact-links">
+      <a href="mailto:Tejasrajemax@gmail.com" class="contact-link">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value">Tejasrajemax@gmail.com</span>
+      </a>
+      <a href="tel:+918271878796" class="contact-link">
+        <span class="contact-link-label">Phone</span>
+        <span class="contact-link-value">+91 82718 78796</span>
+      </a>
+      <a href="https://www.linkedin.com/in/tejas-raj-631322297" class="contact-link" id="">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/tejas-raj-631322297</span>
+      </a>
+      <a href="https://github.com/Tejasrajemax" class="contact-link" id="githubLink">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">github.com/Tejasrajemax</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Tejas Raj. Built with HTML, CSS, JavaScript &amp;</span>
+    <a href="#top" class="footer-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
